@@ -7,3 +7,4 @@ C:\Users\Cliyanagunawardhana\CodingExercises\WeatherApp\WeatherApp\obj\Debug\Wea
 C:\Users\Cliyanagunawardhana\CodingExercises\WeatherApp\WeatherApp\obj\Debug\WeatherApp.csproj.CoreCompileInputs.cache
 C:\Users\Cliyanagunawardhana\CodingExercises\WeatherApp\WeatherApp\obj\Debug\WeatherApp.exe
 C:\Users\Cliyanagunawardhana\CodingExercises\WeatherApp\WeatherApp\obj\Debug\WeatherApp.pdb
+C:\Users\Cliyanagunawardhana\CodingExercises\WeatherApp\WeatherApp\obj\Debug\WeatherApp.WeatherBoard.resources

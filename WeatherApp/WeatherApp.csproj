@@ -63,6 +63,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="WeatherBoard.resx">
+      <DependentUpon>WeatherBoard.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -72,9 +75,123 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Resources\panel_icons\moonset.pdn" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\citynames.txt" />
+    <Content Include="Resources\kumiko-shimizu-731627-unsplash.jpg" />
+    <Content Include="Resources\panel_icons\13526457013454.png" />
+    <Content Include="Resources\panel_icons\filter-uv.png" />
+    <Content Include="Resources\panel_icons\humidity.png" />
+    <Content Include="Resources\panel_icons\moonset.png" />
+    <Content Include="Resources\panel_icons\pin.png" />
+    <Content Include="Resources\panel_icons\precipitation.png" />
+    <Content Include="Resources\panel_icons\References.txt" />
+    <Content Include="Resources\panel_icons\sunrise.png" />
+    <Content Include="Resources\panel_icons\sunset.png" />
+    <Content Include="Resources\panel_icons\wind.png" />
+    <Content Include="Resources\sunny.jpg" />
+    <Content Include="Resources\weather icon.ico" />
+    <Content Include="Resources\weather_icons\daytime\113.png" />
+    <Content Include="Resources\weather_icons\daytime\116.png" />
+    <Content Include="Resources\weather_icons\daytime\119.png" />
+    <Content Include="Resources\weather_icons\daytime\122.png" />
+    <Content Include="Resources\weather_icons\daytime\143.png" />
+    <Content Include="Resources\weather_icons\daytime\176.png" />
+    <Content Include="Resources\weather_icons\daytime\179.png" />
+    <Content Include="Resources\weather_icons\daytime\182.png" />
+    <Content Include="Resources\weather_icons\daytime\185.png" />
+    <Content Include="Resources\weather_icons\daytime\200.png" />
+    <Content Include="Resources\weather_icons\daytime\227.png" />
+    <Content Include="Resources\weather_icons\daytime\230.png" />
+    <Content Include="Resources\weather_icons\daytime\248.png" />
+    <Content Include="Resources\weather_icons\daytime\260.png" />
+    <Content Include="Resources\weather_icons\daytime\263.png" />
+    <Content Include="Resources\weather_icons\daytime\266.png" />
+    <Content Include="Resources\weather_icons\daytime\281.png" />
+    <Content Include="Resources\weather_icons\daytime\284.png" />
+    <Content Include="Resources\weather_icons\daytime\293.png" />
+    <Content Include="Resources\weather_icons\daytime\296.png" />
+    <Content Include="Resources\weather_icons\daytime\299.png" />
+    <Content Include="Resources\weather_icons\daytime\302.png" />
+    <Content Include="Resources\weather_icons\daytime\305.png" />
+    <Content Include="Resources\weather_icons\daytime\308.png" />
+    <Content Include="Resources\weather_icons\daytime\311.png" />
+    <Content Include="Resources\weather_icons\daytime\314.png" />
+    <Content Include="Resources\weather_icons\daytime\317.png" />
+    <Content Include="Resources\weather_icons\daytime\320.png" />
+    <Content Include="Resources\weather_icons\daytime\323.png" />
+    <Content Include="Resources\weather_icons\daytime\326.png" />
+    <Content Include="Resources\weather_icons\daytime\329.png" />
+    <Content Include="Resources\weather_icons\daytime\332.png" />
+    <Content Include="Resources\weather_icons\daytime\335.png" />
+    <Content Include="Resources\weather_icons\daytime\338.png" />
+    <Content Include="Resources\weather_icons\daytime\350.png" />
+    <Content Include="Resources\weather_icons\daytime\353.png" />
+    <Content Include="Resources\weather_icons\daytime\356.png" />
+    <Content Include="Resources\weather_icons\daytime\359.png" />
+    <Content Include="Resources\weather_icons\daytime\362.png" />
+    <Content Include="Resources\weather_icons\daytime\365.png" />
+    <Content Include="Resources\weather_icons\daytime\368.png" />
+    <Content Include="Resources\weather_icons\daytime\371.png" />
+    <Content Include="Resources\weather_icons\daytime\374.png" />
+    <Content Include="Resources\weather_icons\daytime\377.png" />
+    <Content Include="Resources\weather_icons\daytime\386.png" />
+    <Content Include="Resources\weather_icons\daytime\389.png" />
+    <Content Include="Resources\weather_icons\daytime\392.png" />
+    <Content Include="Resources\weather_icons\daytime\395.png" />
+    <Content Include="Resources\weather_icons\nighttime\113.png" />
+    <Content Include="Resources\weather_icons\nighttime\116.png" />
+    <Content Include="Resources\weather_icons\nighttime\119.png" />
+    <Content Include="Resources\weather_icons\nighttime\122.png" />
+    <Content Include="Resources\weather_icons\nighttime\143.png" />
+    <Content Include="Resources\weather_icons\nighttime\176.png" />
+    <Content Include="Resources\weather_icons\nighttime\179.png" />
+    <Content Include="Resources\weather_icons\nighttime\182.png" />
+    <Content Include="Resources\weather_icons\nighttime\185.png" />
+    <Content Include="Resources\weather_icons\nighttime\200.png" />
+    <Content Include="Resources\weather_icons\nighttime\227.png" />
+    <Content Include="Resources\weather_icons\nighttime\230.png" />
+    <Content Include="Resources\weather_icons\nighttime\248.png" />
+    <Content Include="Resources\weather_icons\nighttime\260.png" />
+    <Content Include="Resources\weather_icons\nighttime\263.png" />
+    <Content Include="Resources\weather_icons\nighttime\266.png" />
+    <Content Include="Resources\weather_icons\nighttime\281.png" />
+    <Content Include="Resources\weather_icons\nighttime\284.png" />
+    <Content Include="Resources\weather_icons\nighttime\293.png" />
+    <Content Include="Resources\weather_icons\nighttime\296.png" />
+    <Content Include="Resources\weather_icons\nighttime\299.png" />
+    <Content Include="Resources\weather_icons\nighttime\302.png" />
+    <Content Include="Resources\weather_icons\nighttime\305.png" />
+    <Content Include="Resources\weather_icons\nighttime\308.png" />
+    <Content Include="Resources\weather_icons\nighttime\311.png" />
+    <Content Include="Resources\weather_icons\nighttime\314.png" />
+    <Content Include="Resources\weather_icons\nighttime\317.png" />
+    <Content Include="Resources\weather_icons\nighttime\320.png" />
+    <Content Include="Resources\weather_icons\nighttime\323.png" />
+    <Content Include="Resources\weather_icons\nighttime\326.png" />
+    <Content Include="Resources\weather_icons\nighttime\329.png" />
+    <Content Include="Resources\weather_icons\nighttime\332.png" />
+    <Content Include="Resources\weather_icons\nighttime\335.png" />
+    <Content Include="Resources\weather_icons\nighttime\338.png" />
+    <Content Include="Resources\weather_icons\nighttime\350.png" />
+    <Content Include="Resources\weather_icons\nighttime\353.png" />
+    <Content Include="Resources\weather_icons\nighttime\356.png" />
+    <Content Include="Resources\weather_icons\nighttime\359.png" />
+    <Content Include="Resources\weather_icons\nighttime\362.png" />
+    <Content Include="Resources\weather_icons\nighttime\365.png" />
+    <Content Include="Resources\weather_icons\nighttime\368.png" />
+    <Content Include="Resources\weather_icons\nighttime\371.png" />
+    <Content Include="Resources\weather_icons\nighttime\374.png" />
+    <Content Include="Resources\weather_icons\nighttime\377.png" />
+    <Content Include="Resources\weather_icons\nighttime\386.png" />
+    <Content Include="Resources\weather_icons\nighttime\389.png" />
+    <Content Include="Resources\weather_icons\nighttime\392.png" />
+    <Content Include="Resources\weather_icons\nighttime\395.png" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
