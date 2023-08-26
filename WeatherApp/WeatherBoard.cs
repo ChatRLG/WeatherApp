@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Weather_Broadcast
+namespace WeatherApp
 {
     public partial class WeatherBoard : Form
     {
@@ -32,9 +32,9 @@ namespace Weather_Broadcast
         {
             cityList = new List<City>();
 
-            foreach (var pair in Constant.MapOfCityNameAndID)
+            foreach (var cityIDpair in Settings.CITIES_IDS)
             {
-                City city = new City(pair.Key);
+                City city = new City(cityIDpair.Key);
                 cityList.Add(city);
             }
         }
@@ -103,7 +103,6 @@ namespace Weather_Broadcast
         {
             isDragging = true;
             newPoint = new Point(e.X, e.Y);
-
         }
 
         //when user lets go of mouse
@@ -133,5 +132,6 @@ namespace Weather_Broadcast
                 Application.Exit();
             }
         }
+
     }
 }
