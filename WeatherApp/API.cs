@@ -29,7 +29,7 @@ namespace WeatherApp
             WeatherBoard = weatherboard;
         }
 
-        public async static void FetchDataFromAPI(bool widget)
+        public async static void FetchDataFromAPI(bool addWidget)
         {
             var url = Settings.WEATHER_URL + Settings.API_KEY + "+&q=" + SelectedCity + "&days=" + Settings.FORECAST_DAYS_LIMIT;
 
@@ -50,7 +50,7 @@ namespace WeatherApp
 
                     if (API_Response != null)
                     {
-                        if (widget)
+                        if (addWidget)
                         {
                             Widget widget = new Widget(API_Response);
                             widget.Show();
