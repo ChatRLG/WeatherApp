@@ -4,7 +4,7 @@ namespace WeatherApp
     class Settings
     {
         // List of supported cities
-        public static Dictionary<string, int> CITIES_IDS = new Dictionary<string, int>()
+        public static Dictionary<string, int> LOCATION_IDS = new Dictionary<string, int>()
         {
             { "Calgary", 5913490 },
             { "Toronto", 6087824 },

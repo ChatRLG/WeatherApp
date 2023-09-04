@@ -12,7 +12,7 @@ namespace WeatherApp
 {
     public partial class WeatherBoard : Form
     {
-        List<City> cityList;
+        List<Location> locationList;
 
         public static Label LabelSpinner { get; set; }
 
@@ -24,28 +24,29 @@ namespace WeatherApp
         {
             InitializeComponent();
             FillListCityData();
-            FillCityNamesToCityComboBox();
-            LabelSpinner = labelSpinner;
+            FillCityNamesToLocationComboBox();
+            toolTipBtnGetForecast.SetToolTip(btnGetForecast, "Click to get forecast");
+            LabelSpinner = lblProgressUpdate;
         }
 
         private void FillListCityData()
         {
-            cityList = new List<City>();
+            locationList = new List<Location>();
 
-            foreach (var cityIDpair in Settings.CITIES_IDS)
+            foreach (var cityIDpair in Settings.LOCATION_IDS)
             {
-                City city = new City(cityIDpair.Key);
-                cityList.Add(city);
+                Location _location = new Location(cityIDpair.Key);
+                locationList.Add(_location);
             }
         }
 
-        private void FillCityNamesToCityComboBox()
+        private void FillCityNamesToLocationComboBox()
         {
-            List<string> cityNames = new List<string>();
+            List<string> locationNames = new List<string>();
 
-            foreach (var city in cityList)
+            foreach (var city in locationList)
             {
-                cityNames.Add(city.Name);
+                locationNames.Add(city.Name);
             }
 
             //cbCityList.DataSource = cityNames;
@@ -55,32 +56,32 @@ namespace WeatherApp
         {
             LabelSpinner.Visible = true;
             // get current selected city obj 
-            string currentSelectedCityName = selectCityTextBox.Text;
+            string currentSelectedCityName = txtBoxLocation.Text;
 
             // pass it to API 
             API apiWeather = new API(currentSelectedCityName, this);
             //fetch api to get current weather data and store them in CurrentWeatherResponseFromAPI field
-            API.FetchWeatherDataFromAPI(false);
-            selectCityTextBox.Text = "";
+            API.FetchDataFromAPI(false);
+            txtBoxLocation.Text = "";
 
         }
 
         private void WeatherBoard_Load(object sender, EventArgs e)
         {
-            labelSpinner.Visible = false;
+            lblProgressUpdate.Visible = false;
 
             AutoCompleteStringCollection cityColl = new AutoCompleteStringCollection();
 
-            string[] listCityNames = Helper.GetListOfCityNames();
+            string[] listCityNames = Helper.GetLocationList();
 
             foreach (var cityname in listCityNames)
             {
                 cityColl.Add(cityname);
             }
 
-            selectCityTextBox.AutoCompleteMode = AutoCompleteMode.Suggest;
-            selectCityTextBox.AutoCompleteSource = AutoCompleteSource.CustomSource;
-            selectCityTextBox.AutoCompleteCustomSource = cityColl;
+            txtBoxLocation.AutoCompleteMode = AutoCompleteMode.Suggest;
+            txtBoxLocation.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            txtBoxLocation.AutoCompleteCustomSource = cityColl;
         }
 
         private void Refresh_Click(object sender, EventArgs e)
@@ -121,7 +122,7 @@ namespace WeatherApp
         {
             if (e.KeyCode == Keys.Enter)
             {
-                btnConfirm.PerformClick();
+                btnGetForecast.PerformClick();
             }
         }
 
