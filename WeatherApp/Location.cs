@@ -1,20 +1,20 @@
 ﻿
 namespace WeatherApp
 {
-    class City
+    class Location
     {
         public string Name { get; private set; }
 
-        public City(string name)
+        public Location(string name)
         {
             this.Name = name;
         }
 
         public int GetCityIDFromCityName()
         {
-            if (Settings.CITIES_IDS.TryGetValue(Name, out int cityID))
+            if (Settings.LOCATION_IDS.TryGetValue(Name, out int locationID))
             {
-                return cityID;
+                return locationID;
             }
             return -1;
         }

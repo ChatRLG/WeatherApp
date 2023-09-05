@@ -19,3 +19,10 @@ F:\_CODE\GitHub_repo\WeatherApp\WeatherApp\obj\Debug\WeatherApp.csproj.GenerateR
 F:\_CODE\GitHub_repo\WeatherApp\WeatherApp\obj\Debug\WeatherApp.csproj.CoreCompileInputs.cache
 F:\_CODE\GitHub_repo\WeatherApp\WeatherApp\obj\Debug\WeatherApp.exe
 F:\_CODE\GitHub_repo\WeatherApp\WeatherApp\obj\Debug\WeatherApp.pdb
+O:\_CODE\GitHub_repo\WeatherApp\WeatherApp\obj\Debug\WeatherApp.csproj.AssemblyReference.cache
+O:\_CODE\GitHub_repo\WeatherApp\WeatherApp\obj\Debug\WeatherApp.Properties.Resources.resources
+O:\_CODE\GitHub_repo\WeatherApp\WeatherApp\obj\Debug\WeatherApp.WeatherBoard.resources
+O:\_CODE\GitHub_repo\WeatherApp\WeatherApp\obj\Debug\WeatherApp.csproj.GenerateResource.cache
+O:\_CODE\GitHub_repo\WeatherApp\WeatherApp\obj\Debug\WeatherApp.csproj.CoreCompileInputs.cache
+O:\_CODE\GitHub_repo\WeatherApp\WeatherApp\obj\Debug\WeatherApp.exe
+O:\_CODE\GitHub_repo\WeatherApp\WeatherApp\obj\Debug\WeatherApp.pdb
