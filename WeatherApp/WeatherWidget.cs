@@ -2,27 +2,30 @@
 
 namespace WeatherApp
 {
-    class WeatherWidget
+    public class WeatherWidget
     {
         // Controls to hold View Controls
-        public Label lblLocationName { get; private set; }
-        public Label lblCurrentDate { get; private set; }
-        public Label lblCurrentTemperature { get; private set; }
-        public Label lblDescription { get; private set; }
-        public PictureBox pbIcon { get; private set; }
-        public Label lblWeekDay { get; private set; }
-        public dynamic responseFromAPI { get; private set; }
+        public Label wlblLocationName { get; private set; }
+        public Label wlblCurrentDate { get; private set; }
+        public Label wlblCurrentTemperature { get; private set; }
+        public Label wlblDescription { get; private set; }
+        public PictureBox wpbIcon { get; private set; }
+        public Label wlblWeekDay { get; private set; }
+        public dynamic wresponseFromAPI { get; private set; }
+
+        public WeatherWidget()
+        { }
 
         public WeatherWidget(dynamic dataResponse, Label lblLoc, Label lblDate, Label lblCurrTemp, Label lblDesc, PictureBox pbWeaIcon, Label lblWDay)
         {
-            responseFromAPI = dataResponse;
+            wresponseFromAPI = dataResponse;
 
-            lblLocationName = lblLoc;
-            lblCurrentDate = lblDate;
-            lblCurrentTemperature = lblCurrTemp;
-            lblDescription = lblDesc;
-            pbIcon = pbWeaIcon;
-            lblWeekDay = lblWDay;            
+            wlblLocationName = lblLoc;
+            wlblCurrentDate = lblDate;
+            wlblCurrentTemperature = lblCurrTemp;
+            wlblDescription = lblDesc;
+            wpbIcon = pbWeaIcon;
+            wlblWeekDay = lblWDay;            
         }
 
         public void DiplayCurrentWeather()

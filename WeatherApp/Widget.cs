@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace WeatherApp
@@ -10,9 +11,62 @@ namespace WeatherApp
         private Point newPoint = new Point(0,0);
 
         // refresh widget
-        public Widget()
+        public WeatherWidget _reload = new WeatherWidget();
+
+        public Widget(dynamic WeatherResponse)
         {
             InitializeComponent();
+
+            WeatherWidget widget = new WeatherWidget(WeatherResponse, wlblCity, wlblDate, wlblTempDailyBoxLabel, wlblWeatherDescription, wbpWeatherIconPB, wlblDate);
+            widget.DiplayCurrentWeather();
+            _reload = widget;
+        }
+
+        private void Widget_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void wpnlTitleBG_MouseDown(object sender, MouseEventArgs e)
+        {
+            isDragging = true;
+            newPoint = new Point(e.X, e.Y);
+        }
+
+        private void wpnlTitleBG_MouseUp(object sender, MouseEventArgs e)
+        {
+            isDragging = false;
+        }
+
+        private void wpnlTitleBG_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (isDragging)
+            {
+                Point p = PointToScreen(e.Location);
+                Location = new Point(p.X - newPoint.X, p.Y - newPoint.Y); 
+            }
+        }
+
+        private void wbtnClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        // reload the widget
+        private void wbtnRefresh_Click(object sender, EventArgs e)
+        {
+            _reload.DiplayCurrentWeather();
+            MessageBox.Show("Widget refreshed.");
+        }
+
+        private void Widget_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Widget_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
         }
     }
 }

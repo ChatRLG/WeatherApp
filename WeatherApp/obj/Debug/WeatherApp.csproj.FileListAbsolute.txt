@@ -26,3 +26,10 @@ O:\_CODE\GitHub_repo\WeatherApp\WeatherApp\obj\Debug\WeatherApp.csproj.GenerateR
 O:\_CODE\GitHub_repo\WeatherApp\WeatherApp\obj\Debug\WeatherApp.csproj.CoreCompileInputs.cache
 O:\_CODE\GitHub_repo\WeatherApp\WeatherApp\obj\Debug\WeatherApp.exe
 O:\_CODE\GitHub_repo\WeatherApp\WeatherApp\obj\Debug\WeatherApp.pdb
+O:\_CODE\GitHub_repo\WeatherApp\WeatherApp\bin\Debug\WeatherApp.exe.config
+O:\_CODE\GitHub_repo\WeatherApp\WeatherApp\bin\Debug\WeatherApp.exe
+O:\_CODE\GitHub_repo\WeatherApp\WeatherApp\bin\Debug\WeatherApp.pdb
+O:\_CODE\GitHub_repo\WeatherApp\WeatherApp\bin\Debug\Newtonsoft.Json.dll
+O:\_CODE\GitHub_repo\WeatherApp\WeatherApp\bin\Debug\Newtonsoft.Json.xml
+O:\_CODE\GitHub_repo\WeatherApp\WeatherApp\obj\Debug\WeatherApp.Widget.resources
+O:\_CODE\GitHub_repo\WeatherApp\WeatherApp\obj\Debug\WeatherApp.csproj.CopyComplete
