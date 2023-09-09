@@ -22,11 +22,6 @@ namespace WeatherApp
             _reload = widget;
         }
 
-        private void Widget_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void wpnlTitleBG_MouseDown(object sender, MouseEventArgs e)
         {
             isDragging = true;
@@ -59,14 +54,10 @@ namespace WeatherApp
             MessageBox.Show("Widget refreshed.");
         }
 
-        private void Widget_Load_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void Widget_FormClosing(object sender, FormClosingEventArgs e)
         {
-
+            if (Application.OpenForms.Count == 1)
+                Application.Exit();
         }
     }
 }

@@ -217,7 +217,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Widget";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Widget_FormClosing);
-            this.Load += new System.EventHandler(this.Widget_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.wpbMainIcon)).EndInit();
             this.wpnlTitleBG.ResumeLayout(false);
             this.wpnlTitleBG.PerformLayout();

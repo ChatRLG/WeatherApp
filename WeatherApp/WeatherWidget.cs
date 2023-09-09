@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 
 namespace WeatherApp
 {
@@ -18,8 +19,10 @@ namespace WeatherApp
 
         public WeatherWidget(dynamic dataResponse, Label lblLoc, Label lblDate, Label lblCurrTemp, Label lblDesc, PictureBox pbWeaIcon, Label lblWDay)
         {
+            // initializing weather data
             wresponseFromAPI = dataResponse;
 
+            // initializing view control reference
             wlblLocationName = lblLoc;
             wlblCurrentDate = lblDate;
             wlblCurrentTemperature = lblCurrTemp;
@@ -30,9 +33,46 @@ namespace WeatherApp
 
         public void DiplayCurrentWeather()
         {
-            
+            DisplayWeather();
+            DisplayTemp();
+            DisplayCurrentDateTime();
+            DisplayDescription();
+            DisplayIcon();
+            DisplayWeekDay();            
         }
 
+        private void DisplayWeather()
+        {
+            wlblLocationName.Text = wresponseFromAPI.location.name;            
+        }
 
+        private void DisplayTemp()
+        {
+           wlblCurrentTemperature.Text = wresponseFromAPI.current.temp_c + " ˚C";
+        }
+        private void DisplayCurrentDateTime()
+        {
+            wlblCurrentDate.Text = wresponseFromAPI.forecast.forecast[0].ToString();
+        }
+        private void DisplayDescription()
+        {
+            wlblDescription.Text = wresponseFromAPI.current.condition.text.ToString();
+        }
+        private void DisplayIcon()
+        {
+            var UrlPath = wresponseFromAPI.current.condition.icon;
+            wpbIcon.Load(@"http:" + UrlPath.ToString());
+        }
+        private void DisplayWeekDay()
+        {
+            var currentDate = (DateTime)wresponseFromAPI.forecast.forecastday[0].date;
+            var dayOfWeek = GetDayOfWeekFromGivenDate(currentDate);
+            wlblWeekDay.Text = dayOfWeek;
+        }
+
+        private string GetDayOfWeekFromGivenDate(DateTime currentDate)
+        {
+            return currentDate.DayOfWeek.ToString();
+        }
     }
 }
