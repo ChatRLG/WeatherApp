@@ -70,6 +70,5 @@ namespace WeatherApp
                 MessageBox.Show("Error: " + ex.Message);
             }
         }
-
     }
 }

@@ -1,20 +1,25 @@
-﻿using System.Windows.Forms;
+﻿using System.Drawing;
+using System.Windows.Forms;
 
 namespace WeatherApp
 {
     public partial class WeatherInfoForm : Form
     {
-        private dynamic API_Response;
-        private WeatherApp
+        private Weather weather;
+
+        // form movement variables
+        private bool isDragging;
+        private Point newPoint = new Point(0, 0);
 
         public WeatherInfoForm()
         {
             InitializeComponent();
         }
 
-        public WeatherInfoForm(dynamic aPI_Response)
+        public WeatherInfoForm(dynamic api_response)
         {
-            this.API_Response = aPI_Response;
+            InitializeComponent();
+            //weather = new Weather(api_response, lblCityName);
         }
     }
 }
