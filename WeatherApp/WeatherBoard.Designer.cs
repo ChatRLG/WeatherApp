@@ -46,7 +46,7 @@
             // 
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(103, 40);
+            this.lblTitle.Location = new System.Drawing.Point(104, 41);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(203, 29);
             this.lblTitle.TabIndex = 1;
@@ -79,7 +79,7 @@
             // 
             this.lblSelectCity.AutoSize = true;
             this.lblSelectCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSelectCity.Location = new System.Drawing.Point(46, 136);
+            this.lblSelectCity.Location = new System.Drawing.Point(47, 137);
             this.lblSelectCity.Name = "lblSelectCity";
             this.lblSelectCity.Size = new System.Drawing.Size(169, 25);
             this.lblSelectCity.TabIndex = 3;
@@ -87,7 +87,7 @@
             // 
             // txtBoxLocation
             // 
-            this.txtBoxLocation.Location = new System.Drawing.Point(221, 136);
+            this.txtBoxLocation.Location = new System.Drawing.Point(252, 136);
             this.txtBoxLocation.Multiline = true;
             this.txtBoxLocation.Name = "txtBoxLocation";
             this.txtBoxLocation.Size = new System.Drawing.Size(182, 25);
@@ -95,21 +95,28 @@
             // 
             // btnGetForecast
             // 
+            this.btnGetForecast.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnGetForecast.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGetForecast.Location = new System.Drawing.Point(221, 181);
+            this.btnGetForecast.ForeColor = System.Drawing.Color.White;
+            this.btnGetForecast.Location = new System.Drawing.Point(252, 184);
+            this.btnGetForecast.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
             this.btnGetForecast.Name = "btnGetForecast";
-            this.btnGetForecast.Size = new System.Drawing.Size(182, 30);
+            this.btnGetForecast.Padding = new System.Windows.Forms.Padding(1);
+            this.btnGetForecast.Size = new System.Drawing.Size(182, 32);
             this.btnGetForecast.TabIndex = 4;
             this.btnGetForecast.Text = "Confirm";
-            this.btnGetForecast.UseVisualStyleBackColor = true;
+            this.btnGetForecast.UseVisualStyleBackColor = false;
             // 
             // lblProgressUpdate
             // 
             this.lblProgressUpdate.AutoSize = true;
-            this.lblProgressUpdate.Location = new System.Drawing.Point(218, 232);
+            this.lblProgressUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProgressUpdate.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.lblProgressUpdate.Location = new System.Drawing.Point(301, 238);
             this.lblProgressUpdate.Name = "lblProgressUpdate";
-            this.lblProgressUpdate.Size = new System.Drawing.Size(0, 17);
+            this.lblProgressUpdate.Size = new System.Drawing.Size(94, 17);
             this.lblProgressUpdate.TabIndex = 5;
+            this.lblProgressUpdate.Text = "Processing....";
             // 
             // WeatherBoard
             // 
@@ -127,6 +134,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "WeatherBoard";
+            this.Padding = new System.Windows.Forms.Padding(1);
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Weather App";

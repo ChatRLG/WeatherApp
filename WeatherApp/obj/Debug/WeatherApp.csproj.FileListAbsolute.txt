@@ -33,3 +33,7 @@ O:\_CODE\GitHub_repo\WeatherApp\WeatherApp\bin\Debug\Newtonsoft.Json.dll
 O:\_CODE\GitHub_repo\WeatherApp\WeatherApp\bin\Debug\Newtonsoft.Json.xml
 O:\_CODE\GitHub_repo\WeatherApp\WeatherApp\obj\Debug\WeatherApp.Widget.resources
 O:\_CODE\GitHub_repo\WeatherApp\WeatherApp\obj\Debug\WeatherApp.csproj.CopyComplete
+O:\_CODE\GitHub_repo\WeatherApp\WeatherApp\obj\Debug\WeatherApp.DailyWeatherControl.resources
+O:\_CODE\GitHub_repo\WeatherApp\WeatherApp\obj\Debug\WeatherApp.DailyWInfo.resources
+O:\_CODE\GitHub_repo\WeatherApp\WeatherApp\obj\Debug\WeatherApp.SetLocationForm.resources
+O:\_CODE\GitHub_repo\WeatherApp\WeatherApp\obj\Debug\WeatherApp.WeatherInfoForm.resources
