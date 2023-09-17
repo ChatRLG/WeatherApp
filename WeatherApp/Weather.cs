@@ -107,8 +107,9 @@ namespace WeatherApp
 
         public void DisplayWeatherInfo()
         {
-            
+            CityName.Text = WeatherResponseFromAPI.location.name + ", " + WeatherResponseFromAPI.location.country;            
         }
+
         public void DisplayWeatherForecast()
         {
             var weatherForecastDaysInfo = WeatherResponseFromAPI.forecast.forecastday;

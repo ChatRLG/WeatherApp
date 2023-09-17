@@ -47,22 +47,18 @@ namespace WeatherApp
             //cbCityList.DataSource = cityNames;
         }
 
-        private void btnConfirm_Click(object sender, EventArgs e)
+
+        private void EnteringCity(object sender, KeyEventArgs e)
         {
-            LabelSpinner.Visible = true;
-            // get current selected city obj 
-            string currentSelectedCityName = txtBoxLocation.Text;
-
-            // pass it to API 
-            API apiWeather = new API(currentSelectedCityName, this);
-            //fetch api to get current weather data and store them in CurrentWeatherResponseFromAPI field
-            API.FetchDataFromAPI(false);
-            txtBoxLocation.Text = "";
-
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnGetForecast.PerformClick();
+            }
         }
 
         private void WeatherBoard_Load(object sender, EventArgs e)
         {
+
             lblProgressUpdate.Visible = false;
 
             AutoCompleteStringCollection cityColl = new AutoCompleteStringCollection();
@@ -77,6 +73,19 @@ namespace WeatherApp
             txtBoxLocation.AutoCompleteMode = AutoCompleteMode.Suggest;
             txtBoxLocation.AutoCompleteSource = AutoCompleteSource.CustomSource;
             txtBoxLocation.AutoCompleteCustomSource = cityColl;
+        }
+
+        private void btnGetForecast_Click(object sender, EventArgs e)
+        {
+            lblProgressUpdate.Visible = true;
+            // get current selected city obj 
+            string currentSelectedCityName = txtBoxLocation.Text;
+
+            // pass it to API 
+            API apiWeather = new API(currentSelectedCityName, this);
+            //fetch api to get current weather data and store them in CurrentWeatherResponseFromAPI field
+            API.FetchDataFromAPI(false);
+            txtBoxLocation.Text = "";
         }
 
         private void Refresh_Click(object sender, EventArgs e)
@@ -113,14 +122,6 @@ namespace WeatherApp
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void EnteringCity(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                btnGetForecast.PerformClick();
-            }
-        }
-
         private void WeatherBoard_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (Application.OpenForms.Count == 1)
@@ -128,6 +129,5 @@ namespace WeatherApp
                 Application.Exit();
             }
         }
-
     }
 }

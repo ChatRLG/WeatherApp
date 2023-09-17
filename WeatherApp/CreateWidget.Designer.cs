@@ -1,7 +1,7 @@
 ﻿
 namespace WeatherApp
 {
-    partial class SetLocationForm
+    partial class CreateWidget
     {
         /// <summary>
         /// Required designer variable.
@@ -34,7 +34,7 @@ namespace WeatherApp
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tbLocation = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnNWConfirm = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -87,17 +87,18 @@ namespace WeatherApp
             this.tbLocation.Size = new System.Drawing.Size(187, 30);
             this.tbLocation.TabIndex = 4;
             // 
-            // button1
+            // btnNWConfirm
             // 
-            this.button1.BackColor = System.Drawing.Color.RoyalBlue;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(65, 102);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(187, 36);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Confirm";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnNWConfirm.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnNWConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNWConfirm.ForeColor = System.Drawing.Color.White;
+            this.btnNWConfirm.Location = new System.Drawing.Point(65, 102);
+            this.btnNWConfirm.Name = "btnNWConfirm";
+            this.btnNWConfirm.Size = new System.Drawing.Size(187, 36);
+            this.btnNWConfirm.TabIndex = 5;
+            this.btnNWConfirm.Text = "Confirm";
+            this.btnNWConfirm.UseVisualStyleBackColor = false;
+            this.btnNWConfirm.Click += new System.EventHandler(this.btnNWConfirm_Click);
             // 
             // SetLocationForm
             // 
@@ -105,16 +106,16 @@ namespace WeatherApp
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(312, 203);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnNWConfirm);
             this.Controls.Add(this.tbLocation);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Name = "SetLocationForm";
             this.Text = "Set Location For New Widget";
+            this.LocationChanged += new System.EventHandler(this.SetLocationForm_LocationChanged);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
@@ -129,6 +130,6 @@ namespace WeatherApp
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tbLocation;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnNWConfirm;
     }
 }
