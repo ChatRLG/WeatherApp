@@ -102,10 +102,11 @@
             this.btnGetForecast.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
             this.btnGetForecast.Name = "btnGetForecast";
             this.btnGetForecast.Padding = new System.Windows.Forms.Padding(1);
-            this.btnGetForecast.Size = new System.Drawing.Size(182, 32);
+            this.btnGetForecast.Size = new System.Drawing.Size(182, 36);
             this.btnGetForecast.TabIndex = 4;
             this.btnGetForecast.Text = "Confirm";
             this.btnGetForecast.UseVisualStyleBackColor = false;
+            this.btnGetForecast.Click += new System.EventHandler(this.btnGetForecast_Click);
             // 
             // lblProgressUpdate
             // 
@@ -123,7 +124,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(483, 288);
             this.Controls.Add(this.lblProgressUpdate);
             this.Controls.Add(this.btnGetForecast);
             this.Controls.Add(this.txtBoxLocation);
@@ -138,6 +139,8 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Weather App";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.WeatherBoard_FormClosing);
+            this.Load += new System.EventHandler(this.WeatherBoard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.appImageBox)).EndInit();
             this.ResumeLayout(false);

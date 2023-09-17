@@ -13,7 +13,7 @@ namespace WeatherApp
     {
         public static string SelectedCity { get; private set; }
         public static dynamic API_Response { get; set; } 
-        public static dynamic CurrenyWeather { get; set; }
+        public static dynamic CurrentWeather { get; set; }
         public static dynamic WeatherForecast { get; set; }
         public static WeatherInfoForm InfoForm { get; private set; }
         public static WeatherBoard WeatherBoard { get; set; }
@@ -31,7 +31,7 @@ namespace WeatherApp
 
         public async static void FetchDataFromAPI(bool addWidget)
         {
-            var url = Settings.WEATHER_URL + Settings.API_KEY + "+&q=" + SelectedCity + "&days=" + Settings.FORECAST_DAYS_LIMIT;
+            var url = Settings.WEATHER_URL + Settings.API_KEY + "&query=" + SelectedCity; // + "&days=" + Settings.FORECAST_DAYS_LIMIT;
 
             try
             {
@@ -62,7 +62,6 @@ namespace WeatherApp
                             WeatherBoard.Close();
                         }
                     }
-
                 }
             }
             catch (Exception ex)

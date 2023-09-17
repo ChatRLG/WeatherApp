@@ -19,13 +19,12 @@ namespace WeatherApp
         };
 
         // API Public Key
-        public static string API_KEY = "49dd73dca58244a685c52418182910";
+        public static string API_KEY = "e6b5a3ebfeea6b493041a8725688e2f5";
 
         // Weather API URL
-        public static string WEATHER_URL = "http://api.apixu.com/v1/forecast.json?key=";
+        public static string WEATHER_URL = "http://api.weatherstack.com/current?access_key=";
 
         // Forecast days limit
         public static int FORECAST_DAYS_LIMIT = 5;
-
     }
 }
